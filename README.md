@@ -34,6 +34,19 @@ Then, in the "Docker Credential" dropdown, select your account marked as "Google
 
 Save your configuration and run your job.
 
+### Note when using [Cloudbees Docker Pipeline Plugin](https://wiki.jenkins.io/display/JENKINS/Docker+Pipeline+Plugin)
+
+The Jenkins credentials ID needs to be prefixed with `gcr:` to work with the Cloudbees Docker Pipeline Plugin.  So, for example, if you named your credentials "google-container-registry-project", then your Jenkinsfile should look like the following:
+
+```groovy
+    stage('Push images') {
+        docker.withRegistry('https://us.gcr.io', 'gcr:google-container-registry-project') {
+            myContainer.push("${env.BUILD_NUMBER}")
+            myContainer.push("latest")
+        }
+    }
+```
+
 Security Warning
 ===
 Docker Build Step Plugin will pass the credentials to Docker server daemon. If the Docker server daemon listens on HTTP port without using TLS, this will create a security hole because the credentials (not encrypted, only base64 encoded) can be intercepted via the HTTP traffic. This is a problem of Docker itself. Configuring the Docker server daemon to listen on HTTP port without using TLS is strongly discouraged. When communication to Docker daemon on a remote machine is needed, the traffic can be secured by HTTPS, see Docker's documentation: http://docs.docker.com/articles/https/.
