@@ -12,12 +12,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.google.apis:google-api-services-storage:v1-rev12-1.19.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.api-client:google-api-client:1.19.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.oauth-client:google-oauth-client:1.19.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.http-client:google-http-client-jackson2:1.19.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.1.3" level="project" />
-    <orderEntry type="library" name="Maven: com.google.guava:guava-jdk5:13.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.apis:google-api-services-storage:v1-rev171-1.25.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.api-client:google-api-client:1.25.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.oauth-client:google-oauth-client:1.25.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:28.0-jre" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:failureaccess:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:2.8.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-jxr-plugin:3.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-jxr:3.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
@@ -46,24 +50,29 @@
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:9.0" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.qdox:qdox:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:3.3.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.guava:guava:14.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:docker-commons:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:credentials:2.3.15" level="project" />
     <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:structs:1.22" level="project" />
     <orderEntry type="library" name="Maven: org.antlr:antlr4-runtime:4.9.1" level="project" />
     <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:authentication-tokens:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:google-oauth-plugin:0.3" level="project" />
-    <orderEntry type="library" name="Maven: net.sourceforge.findbugs:jsr305:1.3.2" level="project" />
-    <orderEntry type="library" name="Maven: joda-time:joda-time:1.5.1" level="project" />
-    <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:oauth-credentials:0.3" level="project" />
-    <orderEntry type="library" name="Maven: com.google.http-client:google-http-client-jackson:1.17.0-rc" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.11" level="project" />
-    <orderEntry type="library" name="Maven: com.google.apis:google-api-services-oauth2:v2-rev51-1.17.0-rc" level="project" />
+    <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:google-oauth-plugin:1.0.5" level="project" />
+    <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:jackson2-api:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-json-org:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20190722" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: io.jenkins.plugins:snakeyaml-api:1.27.0" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.27" level="project" />
+    <orderEntry type="library" name="Maven: joda-time:joda-time:2.10.10" level="project" />
+    <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:oauth-credentials:0.4" level="project" />
+    <orderEntry type="library" name="Maven: com.google.http-client:google-http-client-jackson2:1.25.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.apis:google-api-services-oauth2:v2-rev151-1.25.0" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.18" level="project" />
     <orderEntry type="library" name="Maven: com.google.http-client:google-http-client:1.39.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.13" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.14" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.3" level="project" />
     <orderEntry type="library" name="Maven: io.opencensus:opencensus-api:0.28.0" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-context:1.27.2" level="project" />
     <orderEntry type="library" name="Maven: io.opencensus:opencensus-contrib-http-util:0.28.0" level="project" />
@@ -91,19 +100,25 @@
     <orderEntry type="library" name="Maven: org.apache.maven.resolver:maven-resolver-util:1.6.2" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.sisu:org.eclipse.sisu.inject:0.3.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject:guice:no_aop:4.2.1" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.1" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.8.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.google.inject:guice:5.0.1" level="project" />
-    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jenkins-ci.main:jenkins-core:2.277.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jenkins-ci.main:remoting:4.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jenkins-ci.main:cli:2.277.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jenkins-ci:version-number:1.7" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jenkins-ci:crypto-util:1.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jvnet.hudson:jtidy:4aug2000r7-dev-hudson-1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.inject:guice:4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.connectbot.jbcrypt:jbcrypt:1.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jruby.ext.posix:jna-posix:1.0.3-jenkins-1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.github.jnr:jnr-posix:3.1.4" level="project" />

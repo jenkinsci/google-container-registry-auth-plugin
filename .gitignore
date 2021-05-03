@@ -7,4 +7,9 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+
+# IntelliJ
 .idea/
+out/
+*.iml
+*.ipr
