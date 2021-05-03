@@ -78,7 +78,7 @@ public class GoogleContainerRegistryCredentialModule
    * @return whether the credential could be applied to the given requirements.
    */
   public static boolean matches(List<DomainRequirement> requirements) {
-    Jenkins jenkins = Jenkins.getInstance();
+    Jenkins jenkins = Jenkins.get();
     if (jenkins == null) {
       throw new IllegalStateException(
           "Jenkins has not been started, or was already shut down");

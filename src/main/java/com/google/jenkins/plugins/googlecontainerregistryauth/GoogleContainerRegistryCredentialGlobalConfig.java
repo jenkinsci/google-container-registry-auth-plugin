@@ -29,7 +29,7 @@ import net.sf.json.JSONObject;
 
 
 /**
- * Provides global configuration for this plgin.
+ * Provides global configuration for this plugin.
  */
 @Extension
 public class GoogleContainerRegistryCredentialGlobalConfig
