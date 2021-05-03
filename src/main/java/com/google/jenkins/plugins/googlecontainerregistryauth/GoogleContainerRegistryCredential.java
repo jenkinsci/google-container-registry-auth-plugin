@@ -116,7 +116,7 @@ public class GoogleContainerRegistryCredential
    * serialize things.
    */
   private boolean isOnMaster() {
-    return Jenkins.getInstance() != null;
+    return Jenkins.getInstanceOrNull() != null;
   }
 
   /**

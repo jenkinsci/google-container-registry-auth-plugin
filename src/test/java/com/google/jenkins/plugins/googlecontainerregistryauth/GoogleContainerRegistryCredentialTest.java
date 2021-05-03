@@ -213,7 +213,7 @@ public class GoogleContainerRegistryCredentialTest {
 
   @Test
   public void testDescriptorNotRegistered() {
-    assertTrue(Jenkins.getInstance().getDescriptor(
+    assertTrue(Jenkins.get().getDescriptor(
         GoogleContainerRegistryCredential.class) == null);
   }
 
