@@ -14,8 +14,7 @@
  limitations under the License.
 -->
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
-         xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form"
-   xmlns:a="/lib/auth">'
+         xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" >
   <f:section title="${descriptor.displayName}" name="${descriptor.displayName}">
     <f:entry title="${%Serve Address}" field="gcrServer"
         description="${%Comma separated list of allowed container registry server names}">

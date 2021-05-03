@@ -18,12 +18,17 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.596.2</version>
+    <version>4.12</version>
     <relativePath />
   </parent>
 
   <artifactId>google-container-registry-auth</artifactId>
   <packaging>hpi</packaging>
+  <properties>
+    <jenkins.version>2.277.1</jenkins.version>
+    <java.level>8</java.level>
+    <no-test-jar>false</no-test-jar>
+  </properties>
   <version>0.4-SNAPSHOT</version>
 
   <name>Google Container Registry Auth Plugin</name>
@@ -44,6 +49,10 @@
       <id>wzheng2310</id>
       <name>Wei Zheng</name>
     </developer>
+    <developer>
+      <id>vgerris</id>
+      <name>Vincent Gerris</name>
+    </developer>
   </developers>
 
   <scm>
@@ -58,7 +67,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10.1</version>
+        <version>3.2.0</version>
         <configuration>
           <failOnError>false</failOnError>
         </configuration>
@@ -66,12 +75,12 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.5</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.3</version>
+        <version>3.1.1</version>
       </plugin>
     </plugins>
   </reporting>
@@ -83,18 +92,19 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.8</source>
+          <target>1.8</target>
           <forceJavacCompilerUse>true</forceJavacCompilerUse>
         </configuration>
       </plugin>
       <plugin>
         <groupId>org.jenkins-ci.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>1.96</version>
+        <version>3.17</version>
         <extensions>true</extensions>
         <configuration>
           <disabledTestInjection>true</disabledTestInjection>
+          <minimumJavaVersion/>
         </configuration>
       </plugin>
       <plugin>
@@ -119,7 +129,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.5</version>
         <configuration>
           <failOnError>false</failOnError>
           <effort>Max</effort>
@@ -154,12 +164,46 @@
     </plugins>
   </build>
 
+  <distributionManagement>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/releases</url>
+    </repository>
+  </distributionManagement>
+
   <repositories>
     <repository>
       <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
+      <url>https://repo.jenkins-ci.org/public/</url>
     </repository>
+    <repository>
+      <id>repo.jenkins-ci.org-releases</id>
+      <url>https://repo.jenkins-ci.org/releases/</url>
+    </repository>
+
   </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org-pub</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/releases/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.jenkins.tools.bom</groupId>
+        <artifactId>bom-2.222.x</artifactId>
+        <version>26</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <!-- com.google.apis -->
@@ -169,6 +213,14 @@
       <artifactId>google-api-services-storage</artifactId>
       <version>v1-rev12-1.19.0</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jxr-plugin -->
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jxr-plugin</artifactId>
+      <version>3.1.1</version>
+    </dependency>
+
 
     <!-- com.google.guava -->
     <dependency>
@@ -191,11 +243,54 @@
       <version>0.3</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/com.google.http-client/google-http-client -->
+    <dependency>
+      <groupId>com.google.http-client</groupId>
+      <artifactId>google-http-client</artifactId>
+      <version>1.39.2</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.codehaus.plexus/plexus-component-annotations -->
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-component-annotations</artifactId>
+      <version>2.1.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact -->
+      <dependency>
+          <groupId>org.apache.maven</groupId>
+          <artifactId>maven-artifact</artifactId>
+          <version>3.8.1</version>
+      </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-core -->
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-model -->
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-model</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+
+
     <!-- Test dependencies -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -204,6 +299,14 @@
       <version>1.8.4</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
 
+    <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <version>5.0.1</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
 </project>
